@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using SkyblockProject.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SkyblockProjectContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SkyblockProjectContext") ?? throw new InvalidOperationException("Connection string 'SkyblockProjectContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -21,8 +26,8 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    //Sets default Controller to HomeController and default action to Index of HomeController
+    //Sets default Controller to HelloWorldController and default action to Index of HelloWorldController
     name: "default",
-    pattern: "{controller=Home}/{action=Index}");
+    pattern: "{controller=HelloWorld}/{action=Index}");
 
 app.Run();
