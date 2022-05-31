@@ -37,6 +37,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     //Sets default Controller to HelloWorldController and default action to Index of HelloWorldController
     name: "default",
-    pattern: "{controller=HelloWorld}/{action=Index}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
