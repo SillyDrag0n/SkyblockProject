@@ -16,13 +16,13 @@
                 @Html.DisplayNameFor(model => model.CollectionTitle)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.fk_CollectionGroup)
+                @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Level)
+                @Html.DisplayNameFor(model => model.CollectionLevel)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Experience)
+                @Html.DisplayNameFor(model => model.CollectionNeededExp)
             </th>
             <th></th>
         </tr>
@@ -34,13 +34,13 @@
                 @Html.DisplayFor(modelItem => item.CollectionTitle)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.fk_CollectionGroup)
+                @Html.DisplayFor(modelItem => item.Fk_CollectionGroup)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Level)
+                @Html.DisplayFor(modelItem => item.CollectionLevel)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Experience)
+                @Html.DisplayFor(modelItem => item.CollectionNeededExp)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
