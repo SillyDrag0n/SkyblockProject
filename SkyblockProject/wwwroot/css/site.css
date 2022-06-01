@@ -16,3 +16,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.card-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.flow-text {
+    text-align: center;
+    font-size: 20px;
+}

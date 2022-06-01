@@ -20,11 +20,19 @@ namespace SkyblockProject.Controllers
         }
 
         // GET: Collections
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-              return _context.Collection != null ? 
-                          View(await _context.Collection.ToListAsync()) :
-                          Problem("Entity set 'SkyblockProjectContext.Collection'  is null.");
+            //Chearts a LINQ query to select the collections
+            //More information under: https://docs.microsoft.com/en-us/dotnet/standard/linq/
+            var movies = from m in _context.Collection
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                movies = movies.Where(s => s.CollectionTitle!.Contains(searchString));
+            }
+
+            return View(await movies.ToListAsync());
         }
 
         // GET: Collections/Details/5

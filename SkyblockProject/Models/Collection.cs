@@ -4,7 +4,7 @@
     {
         //ID => Primary Key
         public int Id { get; set; }
-        //fk_CollectionGroup points to Table CollectionGroup, Field ID
+        //Fk_CollectionGroup is for filtering the Collections
         public int Fk_CollectionGroup { get; set; }
         //collectionTitel contains the title of the collection
         public string? CollectionTitle { get; set; }

@@ -3,51 +3,68 @@
 @{
     ViewData["Title"] = "Index";
 }
+<h1 class="card-title">Sammlungen und Beschreibung</h1>
+<p class="flow-text">Sammlungen sind eine Möglichkeit, neue Craftingrezepte  freizuschalten, Gegenstände zu tauschen oder  Belohnungen für das Sammeln eines bestimmten Gegenstands zu erhalten.</p>
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
             <th>
-                @Html.DisplayNameFor(model => model.CollectionTitle)
+                Collection Level
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                Benötigte Erfahrungspunkte
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CollectionLevel)
+                Freischalten
             </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
             <th>
-                @Html.DisplayNameFor(model => model.CollectionNeededExp)
+                Aktionen
             </th>
-            <th></th>
+            -->
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CollectionTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fk_CollectionGroup)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CollectionLevel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CollectionNeededExp)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kaktus")) {
+            <tr>
+                <!--
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CollectionTitle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fk_CollectionGroup)
+                        </td>
+                    -->
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
     </tbody>
 </table>
