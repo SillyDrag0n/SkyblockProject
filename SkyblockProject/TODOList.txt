@@ -12,6 +12,7 @@ TODO X
 - Urgency:			1-3
 - Importance:		1-3
 - Task description: We still have to do X and Y.
+- State:			Open/In progress/Done
 
 TODO 1:
 - File:				\Views\Home\Index.cshtml
@@ -21,6 +22,7 @@ TODO 1:
 					- Create proper body design like in the Adobe XD prototype
 					- Create default header design like in the Adobe XD prototype
 					- Create shortcuts to Collections-/Island-/Fairysoul-View
+- State:			Open
 
 TODO 2
 - File:				\Models\SeedData.cs
@@ -31,3 +33,20 @@ TODO 2
 					- If all the collections have been created, execute the following code lines in the VS internal PowerShell console:
 							Add-Migration AllCollectionCreate
 							Update-Database
+- State:			In progress
+							
+TODO 3
+- File:				\Views\Collections\Index.cshtml
+- Urgency:			1
+- Importance:		1
+- Task description:	Only do if enough time is left and needed.
+					We have to do following tasks:
+					- Insert Edit/Details/Delete actions onto the table
+- State:			Open
+
+TODO 4
+- File:				\Views\Island\index.cshtml
+- Urgency:			1-3
+- Importance:		1-3
+- Task description: The design still has to be done
+- State:			Open
