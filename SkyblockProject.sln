@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyblockProject", "SkyblockProject\SkyblockProject.csproj", "{9535DD2B-A83C-4035-88E2-2EC9E41603BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyblockProject", "SkyblockProject\SkyblockProject.csproj", "{9535DD2B-A83C-4035-88E2-2EC9E41603BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

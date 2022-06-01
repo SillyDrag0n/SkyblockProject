@@ -19,23 +19,26 @@
                 </th>
             -->
             <th>
-                @Html.DisplayNameFor(model => model.CollectionLevel)
+                Collection Level
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CollectionNeededExp)
+                Benötigte Erfahrungspunkte
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CollectionUnlock)
+                Freischalten
             </th>
-            <th></th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Where(i => i.CollectionTitle == "Kaktus")) {
-    if (item.CollectionLevel == 2)
-            {
-                <tr>
-                    <!--
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kaktus")) {
+            <tr>
+                <!--
                         <td>
                             @Html.DisplayFor(modelItem => item.CollectionTitle)
                         </td>
@@ -43,19 +46,25 @@
                             @Html.DisplayFor(modelItem => item.Fk_CollectionGroup)
                         </td>
                     -->
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CollectionLevel)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CollectionNeededExp)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
-                </tr>
-            }
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
     </tbody>
 </table>
