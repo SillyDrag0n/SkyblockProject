@@ -1,0 +1,33 @@
+﻿----------------------------------------------------------------------------------------------------------------------------------------------------------------
+TODO List
+Skyblock Project M120 & M226B
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+In this file, we list up everything that still has to be done, plus some useful inforamtion about certain TODOs.
+
+Sample TODO:
+
+TODO X
+- File:				\Path\File.cs
+- Urgency:			1-3
+- Importance:		1-3
+- Task description: We still have to do X and Y.
+
+TODO 1:
+- File:				\Views\Home\Index.cshtml
+- Urgency:			3
+- Importance:		3
+- Task description:	We have to do following tasks: 
+					- Create proper body design like in the Adobe XD prototype
+					- Create default header design like in the Adobe XD prototype
+					- Create shortcuts to Collections-/Island-/Fairysoul-View
+
+TODO 2
+- File:				\Models\SeedData.cs
+- Urgency:			3
+- Importance:		3
+- Task description: We have to do following tasks: 
+					- Create the rest of the collections
+					- If all the collections have been created, execute the following code lines in the VS internal PowerShell console:
+							Add-Migration AllCollectionCreate
+							Update-Database
