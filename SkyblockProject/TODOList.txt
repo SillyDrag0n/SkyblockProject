@@ -33,7 +33,7 @@ TODO 2
 					- If all the collections have been created, execute the following code lines in the VS internal PowerShell console:
 							Add-Migration AllCollectionCreate
 							Update-Database
-- State:			In progress
+- State:			Done, 02.06.2022
 							
 TODO 3
 - File:				\Views\Collections\Index.cshtml
@@ -46,7 +46,14 @@ TODO 3
 
 TODO 4
 - File:				\Views\Island\index.cshtml
-- Urgency:			1-3
-- Importance:		1-3
+- Urgency:			3
+- Importance:		3
 - Task description: The design still has to be done
+- State:			Open
+
+TODO 5
+- File:				\Views\Island\index.cshtml AND \Controllers\Fairy\FairyController.cs
+- Urgency:			2
+- Importance:		2
+- Task description: The design and controller has to be done if there is time remaining
 - State:			Open
