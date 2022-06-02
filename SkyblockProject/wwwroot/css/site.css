@@ -27,3 +27,30 @@ body {
     text-align: center;
     font-size: 20px;
 }
+.collection-text {
+    font-size: 20px;
+}
+
+.overcollection-title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: bold;
+}
+.collection-title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.image {
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+}
+.collection-image {
+    width: 100px;
+    height: 100px;
+}
+.collection-table {
+    width: 80%;
+    margin-left: 15%;
+}
