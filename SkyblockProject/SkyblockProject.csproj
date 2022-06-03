@@ -8,6 +8,24 @@
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="wwwroot\css\Images\classUML.png" />
+    <None Include="wwwroot\css\Images\Collections\CactusCollection.jpg" />
+    <None Include="wwwroot\css\Images\Icons\BookandQuill.png" />
+    <None Include="wwwroot\css\Images\Icons\FairySoul.png" />
+    <None Include="wwwroot\css\Images\Icons\FarmingCollectionIcon.png" />
+    <None Include="wwwroot\css\Images\Icons\logo.png" />
+    <None Include="wwwroot\css\Images\Icons\Skyblock.png" />
+    <None Include="wwwroot\css\Images\Islands\CrimsonIsle.png" />
+    <None Include="wwwroot\css\Images\Islands\DeepCaverns.png" />
+    <None Include="wwwroot\css\Images\Islands\DwarvenMines.png" />
+    <None Include="wwwroot\css\Images\Islands\GoldMine.png" />
+    <None Include="wwwroot\css\Images\Islands\Hub-Island.png" />
+    <None Include="wwwroot\css\Images\Islands\MushroomDesert.png" />
+    <None Include="wwwroot\css\Images\Islands\ParkIsland.png" />
+    <None Include="wwwroot\css\Images\Islands\SkyblockMap.png" />
+    <None Include="wwwroot\css\Images\Islands\SpidersDen.png" />
+    <None Include="wwwroot\css\Images\Islands\TheBarn.png" />
+    <None Include="wwwroot\css\Images\Islands\TheEnd.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,11 +40,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.5" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\Collections\" />
-    <Folder Include="Images\Icons\" />
   </ItemGroup>
 
 </Project>

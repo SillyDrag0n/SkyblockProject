@@ -1,6 +1,183 @@
 html {
   font-size: 14px;
 }
+/* Styles für alle Webseiten */
+* {
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    margin: 0;
+}
+
+.logo {
+    width: 12%;
+    background-size: cover;
+    background-repeat: round;
+    background-image: url(Bilder/logo.png);
+}
+
+.startlogo {
+    background-image: url(Bilder/logo.png);
+    width: 128px;
+    height: 123px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+a:link, a:visited {
+    color: whitesmoke;
+}
+
+.navbar {
+    flex-wrap: wrap;
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-left: 2px solid purple;
+}
+
+    .navbar a {
+        width: 22%;
+    }
+
+#active {
+    background-color: rgb(0, 140, 90);
+}
+
+.navbar a, .navbar div {
+    font-weight: bold;
+    padding: 30px 0px;
+    background-color: rgb(79, 79, 79);
+    text-align: center;
+    border: 2px solid purple;
+    border-left: none;
+}
+
+a:hover {
+    background-color: rgb(119, 119, 119);
+}
+
+.main {
+    margin: 0px 12%;
+    text-align: center;
+}
+
+    .main h1 {
+        color: rgb(100, 100, 100);
+    }
+
+/* Styles für Index */
+
+.linkflex {
+    flex-wrap: wrap;
+    display: flex;
+    border: 3px solid grey;
+    border-left: none;
+    width: 100%;
+    background-color: darkgrey;
+}
+
+
+    .linkflex a {
+        text-align: center;
+        border-left: 3px solid grey;
+        width: 33.333333333333333333%;
+        padding: 15px 10px;
+        font-weight: bold;
+    }
+
+    .linkflex img {
+        width: 100%;
+    }
+/* Styles für Collections */
+
+/* Wird hier nicht beachtet da dieses View mit einer Datenbank zusammenarbeiten wird. */
+
+/* Styles für Islands und Fairysouls */
+.map {
+    width: 80%;
+}
+
+.flexlist {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+}
+
+.flexitem {
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 5%;
+}
+
+    .flexitem h4 {
+        font-weight: bold;
+    }
+
+    .flexitem p {
+        font-size: 11px;
+    }
+
+.flexlist iframe {
+    height: 56.25%;
+}
+
+@media screen and (min-width: 1224.5px) {
+    h1 {font-size: 3.25em;}
+    h3 {font-size: 2.34em;}
+    h4 {font-size: 2em;}
+    p {font-size: 1.5em;}
+    a {font-size: 1.5em;}
+    .flexitem p {font-size: 22px;}
+}
+
+@media screen and (max-width: 768.5px) {
+    body {
+        margin: 0px 4px 4px;
+    }
+
+    .main {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 515.5px) {
+    .logo, .startlogo {
+        display: none;
+    }
+
+    .navbar a {
+        width: 50%;
+        padding: 20px 0px;
+    }
+
+    .linkflex {
+        border-bottom: none;
+    }
+
+        .linkflex a {
+            width: 100%;
+            border-bottom: 3px solid grey;
+        }
+
+        .linkflex img {
+            width: 35%;
+        }
+
+    .flexitem {
+        width: 100%;
+    }
+
+    .fairysoulimg {
+        width: 40%;
+    }
+}
+
 
 @media (min-width: 768px) {
   html {
