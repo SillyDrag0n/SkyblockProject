@@ -6,8 +6,46 @@
 <h1 class="card-title">Sammlungen und Beschreibung</h1>
 <p class="flow-text">Sammlungen sind eine Möglichkeit, neue Craftingrezepte  freizuschalten, Gegenstände zu tauschen oder  Belohnungen für das Sammeln eines bestimmten Gegenstands zu erhalten.</p>
 
+<!-- Farming Collection -->
+<table style="width:100%">
+    <tr>
+        <td style="width:20%">
+            <p class="overcollection-title">Farming Sammlung</p>
+        </td>
+        <td style="width:80%">
+            <img class="image" src="../Images/Icons/FarmingCollectionIcon.png" alt="Farming Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="flow-text">Die Farming Sammlung enthält folgende Items. Durch das sammeln dieser Items erhöht sic hderen Sammlungslevel und man schaltet jegliche Rezept, Items, etc. frei.</p>
+        </td>
+    </tr>
+</table>
 
-<table class="table">
+<!-- Kaktus Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">
+            <p class="collection-title">Kaktus Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="../Images/Collections/CactusCollection.jpg" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Kaktus Sammlungslevel wird beim Farmen von Kakteen erhöht. 
+                <br />
+                Kakteen lassen sich vorallem auf der Pilzinsel finden.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
     <thead>
         <tr>
             <!--
@@ -19,13 +57,13 @@
                 </th>
             -->
             <th>
-                Collection Level
+                Sammlungslevel
             </th>
             <th>
                 Benötigte Erfahrungspunkte
             </th>
             <th>
-                Freischalten
+                Belohnung
             </th>
             <!--
                 Insert Tableheader element when implementing Edit/Details/Delete actions
@@ -38,14 +76,6 @@
     <tbody>
         @foreach (var item in Model.Where(i => i.CollectionTitle == "Kaktus")) {
             <tr>
-                <!--
-                        <td>
-                            @Html.DisplayFor(modelItem => item.CollectionTitle)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Fk_CollectionGroup)
-                        </td>
-                    -->
                 <td>
                     @Html.DisplayFor(modelItem => item.CollectionLevel)
                 </td>
@@ -68,3 +98,7 @@
         }
     </tbody>
 </table>
+
+<!-- Kaktus Collection -->
+
+<!-- Farming Collection -->
