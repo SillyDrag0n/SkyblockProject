@@ -3,9 +3,27 @@
 @{
     ViewData["Title"] = "Index";
 }
-<h1 class="card-title">Sammlungen und Beschreibung</h1>
-<p class="flow-text">Sammlungen sind eine Möglichkeit, neue Craftingrezepte  freizuschalten, Gegenstände zu tauschen oder  Belohnungen für das Sammeln eines bestimmten Gegenstands zu erhalten.</p>
 
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="~/css/site.css">
+<link rel="icon" href="..\Images/Icons/logo.png">
+<title>HPSB-Collections</title>
+<div class="navbar">
+    <div class="logo"></div>
+    <a href="Home">Startseite</a>
+    <a id="active" href="Collections">Sammlungen</a>
+    <a href="Islands">Inseln</a>
+    <a href="Fairysoul.html">Feenseelen</a>
+</div>
+<div class="main">
+    <h1>Sammlungen und Beschreibungen</h1>
+    <p>
+        Sammlungen sind eine Möglichkeit, neue Craftingrezepte freizuschalten, 
+        Gegenstände zu tauschen oder Belohnungen für das Sammeln eines bestimmten Gegenstands zu erhalten.
+    </p>
+    
 <!-- Farming Collection -->
 <table style="width:100%">
     <tr>
@@ -18,7 +36,7 @@
     </tr>
     <tr>
         <td colspan="2">
-            <p class="flow-text">Die Farming Sammlung enthält folgende Items. Durch das sammeln dieser Items erhöht sic hderen Sammlungslevel und man schaltet jegliche Rezept, Items, etc. frei.</p>
+            <p class="flow-text">Die Farming Sammlung enthält folgende Items. Durch das sammeln dieser Items erhöht sich deren Sammlungslevel und man schaltet jegliche Rezept, Items, etc. frei.</p>
         </td>
     </tr>
 </table>
@@ -27,11 +45,11 @@
 
 <table class="collection-table">
     <tr>
-        <td width="25%">
+        <td width="25%">    
             <p class="collection-title">Kaktus Sammlung</p>
         </td>
         <td>
-            <img class="collection-image" src="../Images/Collections/CactusCollection.jpg" alt="Kaktus Collection Icon"/>
+            <img class="collection-image" src="~/css/Images/Collections/CactusCollection.jpg" alt="Kaktus Collection Icon"/>
         </td>
     </tr>
     <tr>
@@ -99,6 +117,1616 @@
     </tbody>
 </table>
 
-<!-- Kaktus Collection -->
+<!-- Karotten Collection -->
 
-<!-- Farming Collection -->
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Karotten Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/CarrotCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Karotten Sammlungslevel wird beim Farmen von Karotten erhöht. 
+                <br />
+                Karotten lassen sich an den verschiedensten Orten finden, unteranderem an Orten wie der Farm.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Karotte")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Kakao Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Kakao Sammlung</p>
+        </td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Kakao Sammlungslevel wird beim Farmen von Kakao Bohnen erhöht. 
+                <br />
+                Kakao Bohnen findet man in der Pilzwüste.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kakao")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Feder Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Feder Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/FeatherCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Feder Sammlungslevel wird beim Sammeln von Federn erhöht. 
+                <br />
+                Hühner, welche sich auf der Farm finden lassen, lassen beim Töten unter anderem Federn fallen.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Feder")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Leder Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Leder Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/LeatherCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Leder Sammlungslevel wird beim Sammeln von Leder erhöht. 
+                <br />
+                Kühe, welche sich auf der Farm finden lassen, lassen beim Töten unter anderem Leder fallen.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Leder")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- <Melone Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Melone Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/MelonCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Melonen Sammlungslevel wird beim Sammeln von Melonen erhöht. 
+                <br />
+                Melonen findet man auf der Farm Insel, wo man sie einfach abbauen kann.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Melone")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Pilz Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Pilz Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/MushroomCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Pilz Sammlungslevel wird beim Sammeln von Pizen erhöht. 
+                <br />
+                Pilze findet man auf der Wüsteninsel.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Pilz")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Hammelfleisch Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Hammelfleisch Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/MuttonCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Hammelfleisch Sammlungslevel wird beim Sammeln von Hammelfleisch erhöht. 
+                <br />
+                Schafe lassen beim töten unter anderem Hammelfleisch fallen. Schafe findet man auf der Farm.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Hammelfleisch")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Netherwarzen Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Pilz Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/NetherWartCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Netherwarzen Sammlungslevel wird beim Sammeln von Netherwarzen erhöht.
+                <br />
+                Netherwarzen findet man auf der Karmesin-Insel.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Netherwarzen")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Kartoffel Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Kartoffel Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/PotatoCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Kartoffel Sammlungslevel wird beim Sammeln von Kartoffeln erhöht.
+                <br />
+                Kartoffeln findet man bei der Scheune.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kartoffel")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Kürbis Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Kürbis Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/PumpkinCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Kürbis Sammlungslevel wird beim Sammeln von Kürbis erhöht.
+                <br />
+                Kürbis findet man bei der Scheune.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kürbis")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Ruhes Huhn Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Rohes Huhn Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/ChickenCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Rohes-Huhn Sammlungslevel wird beim Sammeln von rohem Huhn erhöht.
+                <br />
+                Rohes Huhn bekommt man indem man Hühner tötet.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Huhn")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Ruhes Schwein Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Rohes Schwein Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/PigCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das rohes Schwein Sammlungslevel wird beim Sammeln von rohem Schwein erhöht.
+                <br />
+                Rohes Schwein bekommt man indem man Schweine tötet.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Schwein")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Roher Hase Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Roher Hase Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/BunnyCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das roher Hase Sammlungslevel wird beim Sammeln von rohen Hasen erhöht.
+                <br />
+                Roher Hase bekommt man indem man Hasen tötet.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Hase")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Samen Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Samen Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/SeedCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Samen Sammlungslevel wird beim Sammeln von Samen erhöht.
+                <br />
+                Samen bekommt man indem man Weizen abbaut.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Samen")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Zuckerrohr Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Zuckerrohr Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/SugarcaneCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Zuckerrohr Sammlungslevel wird beim Sammeln von Zuckerrohr erhöht.
+                <br />
+                Zuckerrohr findet man auf der Wüsteninsel.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Zuckerrohr")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Weizen Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Rohes Huhn Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/WheatCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Rohes-Huhn Sammlungslevel wird beim Sammeln von rohem Huhn erhöht.
+                <br />
+                Rohes Huhn bekommt man indem man Hühner töten.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Weizen")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Mining Collection -->
+<table style="width:100%">
+    <tr>
+        <td style="width:20%">
+            <p class="overcollection-title">Mining Sammlung</p>
+        </td>
+        <td style="width:80%">
+            <img class="image" src="../Images/Icons/MiningCollectionIcon.png" alt="Farming Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="flow-text">Die Mining Sammlung enthält folgende Items. Durch das sammeln dieser Items erhöht sich deren Sammlungslevel und man schaltet jegliche Rezept, Items, etc. frei.</p>
+        </td>
+    </tr>
+</table>
+
+<!-- Kohle Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Kohle Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/CoalCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Kohle Sammlungslevel wird beim Sammeln von Kohle erhöht.
+                <br />
+                Kohle findet man in jeglichsten Minen.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kohle")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Bruchstein Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Bruchstein Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/CobblestoneCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Bruchstein Sammlungslevel wird beim Sammeln von Bruchstein erhöht.
+                <br />
+                Bruchstein erhält man wenn man Stein abbaut. Stein findet man so gut wie überall.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Kohle")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Diamanten Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Kohle Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/DiamondCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Diamanten Sammlungslevel wird beim Sammeln von Diamanten erhöht.
+                <br />
+                Diamanten findet man in den tiefen Höhlen.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Diamant")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Smaragd Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">Smaragd Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/EmeraldCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das Smaragd Sammlungslevel wird beim Sammeln von Smaragden erhöht.
+                <br />
+                Smaragde findet man in den tiefen Höhlen.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "Smaragd")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- End Stein Collection -->
+
+<table class="collection-table">
+    <tr>
+        <td width="25%">    
+            <p class="collection-title">End Stein Sammlung</p>
+        </td>
+        <td>
+            <img class="collection-image" src="~/css/Images/Collections/CoalCollection.png" alt="Kaktus Collection Icon"/>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <p class="collection-text">
+                Das End Stein Sammlungslevel wird beim Sammeln von End Stein erhöht.
+                <br />
+                End Stein findet man auf der End Insel.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="collection-table">
+    <thead>
+        <tr>
+            <!--
+                <th>
+                    @Html.DisplayNameFor(model => model.CollectionTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fk_CollectionGroup)
+                </th>
+            -->
+            <th>
+                Sammlungslevel
+            </th>
+            <th>
+                Benötigte Erfahrungspunkte
+            </th>
+            <th>
+                Belohnung
+            </th>
+            <!--
+                Insert Tableheader element when implementing Edit/Details/Delete actions
+            <th>
+                Aktionen
+            </th>
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Where(i => i.CollectionTitle == "End Stein")) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionLevel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionNeededExp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CollectionUnlock)
+                </td>
+                <!--
+                    Edit/Details/Delete Functions currently not needed.
+                    Implement when still time left.
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+                -->
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>
