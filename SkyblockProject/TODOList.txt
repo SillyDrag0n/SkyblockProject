@@ -22,7 +22,7 @@ TODO 1:
 					- Create proper body design like in the Adobe XD prototype
 					- Create default header design like in the Adobe XD prototype
 					- Create shortcuts to Collections-/Island-/Fairysoul-View
-- State:			Open
+- State:			Done
 
 TODO 2
 - File:				\Models\SeedData.cs
@@ -42,18 +42,18 @@ TODO 3
 - Task description:	Only do if enough time is left and needed.
 					We have to do following tasks:
 					- Insert Edit/Details/Delete actions onto the table
-- State:			Open
+- State:			Done
 
 TODO 4
 - File:				\Views\Island\index.cshtml
 - Urgency:			3
 - Importance:		3
 - Task description: The design still has to be done
-- State:			Open
+- State:			Done
 
 TODO 5
 - File:				\Views\Island\index.cshtml AND \Controllers\Fairy\FairyController.cs
 - Urgency:			2
 - Importance:		2
 - Task description: The design and controller has to be done if there is time remaining
-- State:			Open
+- State:			Done
