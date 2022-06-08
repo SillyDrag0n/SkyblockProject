@@ -1718,7 +1718,7 @@ namespace SkyblockProject.Models
                                 CollectionUnlock = "Verzaubertes Buch (Glück II) Rezept"
                             },
 
-                            //Kies Collection
+                        //Kies Collection
                             new Collection
                             {
                                 CollectionTitle = "Kies",
@@ -2744,7 +2744,7 @@ namespace SkyblockProject.Models
                                 CollectionUnlock = "Verzauberter Knochenblock Rezept"
                             },
 
-                            //Enderperlen Collection
+                        //Enderperlen Collection
                             new Collection
                             {
                                 CollectionTitle = "Enderperle",
@@ -2809,7 +2809,7 @@ namespace SkyblockProject.Models
                                 CollectionUnlock = "Rettende Gnade Rezept"
                             },
 
-                            //Ghasttränen Collection
+                        //Ghasttränen Collection
                             new Collection
                             {
                                 CollectionTitle = "Ghastträne",
